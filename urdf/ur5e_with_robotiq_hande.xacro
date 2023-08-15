@@ -23,4 +23,12 @@
     <child link="base_link" /> <!-- TODO: check base_link name of robot -->
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
   </joint>
+
+  <!-- define the gripper's tool center point (TCP) position and orientation WRT the flange connector -->
+  <link name="virtual_ee_link" />
+  <joint name="virtual_ee_joint" type="fixed">
+    <parent link="tool0" />
+    <child link="virtual_ee_link" /> <!-- TODO: check base_link name of robot -->
+    <origin xyz="0.0 0.0 0.157" rpy="0.0 0.0 0.0" />
+  </joint>
 </robot>
